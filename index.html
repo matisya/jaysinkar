@@ -35,7 +35,6 @@ body {
   width: 100%;
   height: 100%;
   opacity: 0;
- 
 }
 
 .slide.current {
@@ -158,8 +157,7 @@ body {
     const nextButton = document.getElementById("next");
     const prevButton = document.getElementById("prev");
     const auto = true;
-    const intervalTime = 5000;
-    let slideInterval;
+
 
     const nextSlide = () => {
       const current = document.querySelector(".current");
@@ -183,22 +181,14 @@ body {
 
     nextButton.addEventListener("click", () => {
       nextSlide();
-      if (auto) {
-        clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, intervalTime);
-      }
+     
     });
     prevButton.addEventListener("click", () => {
       prevSlide();
-      if (auto) {
-        clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, intervalTime);
-      }
+    
     });
 
-    if (auto) {
-      slideInterval = setInterval(nextSlide, intervalTime);
-    }
+  
 
   </script>
 
